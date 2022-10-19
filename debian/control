@@ -1,0 +1,35 @@
+Source: wkhtmltopdf
+Section: utils
+Priority: optional
+Maintainer: Emmanuel Bouthenot <kolter@debian.org>
+Build-Depends:
+    debhelper (>= 13),
+    debhelper-compat (= 13),
+    qt5-qmake-bin,
+    qtbase5-dev,
+    libqt5webkit5-dev,
+    libqt5svg5-dev,
+    libqt5xmlpatterns5-dev,
+    qtdeclarative5-dev,
+    libqt5opengl5-dev
+Standards-Version: 4.6.0.1
+Rules-Requires-Root: no
+Homepage: https://wkhtmltopdf.org/
+Vcs-Git: https://salsa.debian.org/kolter/wkhtmltopdf.git
+Vcs-Browser: https://salsa.debian.org/kolter/wkhtmltopdf
+
+Package: wkhtmltopdf
+Architecture: any
+Depends:
+    ${misc:Depends},
+    ${shlibs:Depends}
+Recommends: xserver | xvfb
+Description: Command line utilities to convert html to pdf or image using WebKit
+ wkhtmltopdf is a command line program which permits one to create a
+ pdf or an image from an url, a local html file or stdin. It produces a pdf or
+ an image like rendered with the WebKit engine.
+ .
+ This program requires an X11 server to run.
+ .
+ It is not built against a forked version of Qt hence some options are not
+ supported.

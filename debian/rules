@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+export QT_SELECT=qt5
+
+override_dh_auto_install:
+	# skip auto install and build/install manpages separately
+	$(MAKE) -C src/pdf install_man INSTALL_ROOT=$(CURDIR)/debian/wkhtmltopdf/usr
+	$(MAKE) -C src/image install_man INSTALL_ROOT=$(CURDIR)/debian/wkhtmltopdf/usr
+
+clean:
+#	# Binaries not removed properly
+	rm -rf bin
+	# Remove build objects
+	find -iname 'moc_*.*' -delete
+	find -iname '*.o' -delete
+	dh $@
+
+%:
+	dh $@

@@ -1,0 +1,2 @@
+bin/wkhtmltopdf usr/bin
+bin/wkhtmltoimage usr/bin

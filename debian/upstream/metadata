@@ -1,0 +1,7 @@
+Name: wkhtmltopdf
+Repository: https://github.com/wkhtmltopdf/wkhtmltopdf.git
+Repository-Browse: https://github.com/wkhtmltopdf/wkhtmltopdf
+Changelog: https://github.com/wkhtmltopdf/wkhtmltopdf/blob/master/CHANGELOG.md
+Bug-Database: https://github.com/wkhtmltopdf/wkhtmltopdf/issues
+Bug-Submit: https://github.com/wkhtmltopdf/wkhtmltopdf/issues/new
+Contact: http://groups.google.com/group/wkhtmltopdf-general
